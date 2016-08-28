@@ -12,6 +12,6 @@ Thumbnails can be created with the built in thumbnail creator. Album view suppor
 ![Screenshot](images/second.png)
 
 The video renderer is written in OpenGL and color conversion from YUV to RGB is done with fragment shaders.
-Image manipulation can be achieved by filters. Multiple filters can be chained together.
+Image manipulation can be done with filters. Multiple filters can be chained together.
 
 ![Screenshot](images/third.png)
