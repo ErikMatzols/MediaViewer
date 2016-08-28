@@ -1,0 +1,26 @@
+[Microsoft Network Provider]
+sDisplayName=@device:sw:{71985F4B-1CA1-11D3-9CC8-00C04F7971E0}\Microsoft Network Provider
+sName=Microsoft Network Provider
+sInterface=IScanningTuner
+iOut=1
+sOut0Name=Antenna Out
+sOut0ConnectFilter=PCTV 80e/290e/460e BDA 2875 TVTuner
+sOut0ConnectPin=Input0
+
+[PCTV 80e/290e/460e BDA 2875 TVTuner]
+sDisplayName=@device:pnp:\\?\usb#vid_2013&pid_024f#00000006lfe6#{71985f48-1ca1-11d3-9cc8-00c04f7971e0}\{7c8095ab-c110-40e5-9f4d-310858bbbf64}
+sName=PCTV 80e/290e/460e BDA 2875 TVTuner
+sInterface=None
+iOut=1
+sOut0Name=MPEG2 Transport
+sOut0ConnectFilter=PCTV 80e/290e/460e BDA 2875 Capture
+sOut0ConnectPin=MPEG2 Transport
+
+[PCTV 80e/290e/460e BDA 2875 Capture]
+sDisplayName=@device:pnp:\\?\usb#vid_2013&pid_024f#00000006lfe6#{fd0a5af4-b41d-11d2-9c95-00c04f7971e0}\{bc102acb-6095-451d-8ed6-16cf3c832ebc}
+sName=PCTV 80e/290e/460e BDA 2875 Capture
+sInterface=None
+iOut=1
+sOut0Name=MPEG2 Transport
+sOut0ConnectFilter=MediaViewerDemuxer
+sOut0ConnectPin=In

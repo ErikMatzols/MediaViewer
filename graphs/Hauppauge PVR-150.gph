@@ -1,0 +1,62 @@
+[Hauppauge WinTV PVR PCI II TvTuner]
+sDisplayName=@device:pnp:\\?\pci#ven_4444&dev_0016&subsys_88010070&rev_01#4&1b359d48&0&08f0#{a799a800-a46d-11d0-a18c-00a02401dcd4}\{ebe24d78-f037-4932-b879-ccefefe78750}
+sName=Hauppauge WinTV PVR PCI II TvTuner
+sInterface=IAMTVTuner
+iOut=2
+sOut0Name=Analog Video
+sOut1Name=Analog Audio
+sOut0ConnectFilter=Hauppauge WinTV PVR PCI II Crossbar
+sOut0ConnectPin=0: Video Tuner In
+sOut1ConnectFilter=Hauppauge WinTV PVR PCI II TvAudio
+sOut1ConnectPin=TVAudio In
+
+[Hauppauge WinTV PVR PCI II TvAudio]
+sDisplayName=@device:pnp:\\?\pci#ven_4444&dev_0016&subsys_88010070&rev_01#4&1b359d48&0&08f0#{a799a802-a46d-11d0-a18c-00a02401dcd4}\{bd5227e3-96bb-4172-9cd3-d07b25fac01a}
+sName=Hauppauge WinTV PVR PCI II TvAudio
+sInterface=None
+iOut=1
+sOut0Name=TvAudio Out
+sOut0ConnectFilter=Hauppauge WinTV PVR PCI II Crossbar
+sOut0ConnectPin=1: Audio Tuner In
+
+[Hauppauge WinTV PVR PCI II Crossbar]
+sDisplayName=@device:pnp:\\?\pci#ven_4444&dev_0016&subsys_88010070&rev_01#4&1b359d48&0&08f0#{a799a801-a46d-11d0-a18c-00a02401dcd4}\{e4e33899-8d15-47d1-becc-113883d0bbc9}
+sName=Hauppauge WinTV PVR PCI II Crossbar
+sInterface=IAMCrossbar
+iOut=2
+sOut0Name=0: Video Decoder Out
+sOut1Name=1: Audio Decoder Out
+sOut0ConnectFilter=Hauppauge WinTV PVR PCI II Capture
+sOut0ConnectPin=Analog Video In
+sOut1ConnectFilter=Hauppauge WinTV PVR PCI II Capture
+sOut1ConnectPin=Analog Audio In
+iRoutes=2
+sRoute0=0,0
+sRoute1=1,1
+
+[Hauppauge WinTV PVR PCI II Capture]
+sDisplayName=@device:pnp:\\?\pci#ven_4444&dev_0016&subsys_88010070&rev_01#4&1b359d48&0&08f0#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\{9b365890-165f-11d0-a195-0020afd156e4}
+sName=Hauppauge WinTV PVR PCI II Capture
+sInterface=None
+iOut=2
+sOut0Name=Capture
+sOut1Name=Audio Out
+sOut0ConnectFilter=Hauppauge WinTV Color Format Converter 2
+sOut1ConnectFilter=Default DirectSound Device
+sOut0ConnectPin=Input
+sOut1ConnectPin=Audio Input Pin (rendered)
+
+[Hauppauge WinTV Color Format Converter 2]
+sDisplayName=@device:sw:{083863F1-70DE-11D0-BD40-00A0C911CE86}\\{89B7EC37-C81D-492C-90FF-07AA6DC95B7F}
+sName=Hauppauge WinTV Color Format Converter 2
+sInterface=None
+iOut=1
+sOut0Name=Out
+sOut0ConnectFilter=MediaViewerVideoRenderer
+sOut0ConnectPin=In
+
+[Default DirectSound Device]
+sDisplayName=@device:cm:{E0F158E1-CB04-11D0-BD4E-00A0C911CE86}\Default DirectSound Device
+sName=Default DirectSound Device
+sInterface=IID_IBasicAudio
+iOut=0

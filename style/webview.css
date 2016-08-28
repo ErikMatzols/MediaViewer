@@ -1,0 +1,19 @@
+body {
+color: #FFFFFF;
+background-color : #000000;
+}
+
+#picture {
+float: center;
+width: 400px;
+}
+
+#picture2 {
+float: center;
+width: 330;
+}
+
+#picture3 {
+float: center;
+width: 662;
+}
