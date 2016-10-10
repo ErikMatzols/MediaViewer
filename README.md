@@ -1,6 +1,6 @@
 # MediaViewer
 
-MediaViewer is a media player that can handle almost any format. It has built in support for TV-tuners and can handle multiple TV-tuners in the same channel list.
+MediaViewer is a media player that was written in 2008. It has built in support for TV-tuners and can handle multiple TV-tuners in the same channel list.
 The built in client/server enables streaming of the content in the album list of the server instance and the TV-tuners channel list.
 
 ![Screenshot](images/first.png)
